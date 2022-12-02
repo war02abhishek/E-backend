@@ -34,11 +34,14 @@ app.use("/api/v1", order);
 app.use("/api/v1", add);
 app.use("/api/v1", payment);
 //middleware 
-app.use(express.static(path.join(__dirname,"../MERN_PROJECT/frontend/build")))
+// app.use(express.static(path.join(__dirname,"../MERN_PROJECT/frontend/build")))
 
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../frontend/build/index.html"))
-})
+// app.get('*',(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,"../frontend/build/index.html"))
+// })
+app.get("/", (req, res) => {
+  res.send("Hello to E-commerce API idnex.js");
+});
 
 app.use(errorMiddleware);
 export default app;
