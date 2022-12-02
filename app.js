@@ -27,7 +27,8 @@ import user from "./routes/userRoute.js"
 import order from "./routes/orderRoute.js"
 import  add from "./routes/addRoute.js"
 import payment from "./routes/paymentRoute.js"
-
+import cors from "cors";
+app.use(cors()); 
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
